@@ -1635,3 +1635,6 @@ code {
 .highlight .line {
   height: 22px;
 }
+.gist .gist-data {
+  max-height: 400px;
+}

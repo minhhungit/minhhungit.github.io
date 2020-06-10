@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="ProblemsI suggest first reading  and  Slider dialog that I implemented basically is a panel dialog, for some reasons, Serenity will hide parent panel of your dialog when it opens new panel dialog. For">
+<meta name="keywords" content="serenity,slider,serenity-dialog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How To Create A Slider Dialog In Serenity (Part 3)">
+<meta property="og:url" content="https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/index.html">
+<meta property="og:site_name" content="Jin&#39;s blog">
+<meta property="og:description" content="ProblemsI suggest first reading  and  Slider dialog that I implemented basically is a panel dialog, for some reasons, Serenity will hide parent panel of your dialog when it opens new panel dialog. For">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/panel-hidden.png">
+<meta property="og:image" content="https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/shrinked.png">
+<meta property="og:image" content="https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/next-previous-buttons.png">
+<meta property="og:image" content="https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/slider-dialog-with-next-previous-button-demo.gif">
+<meta property="og:updated_time" content="2020-06-10T13:10:37.513Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How To Create A Slider Dialog In Serenity (Part 3)">
+<meta name="twitter:description" content="ProblemsI suggest first reading  and  Slider dialog that I implemented basically is a panel dialog, for some reasons, Serenity will hide parent panel of your dialog when it opens new panel dialog. For">
+<meta name="twitter:image" content="https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/panel-hidden.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/c7095a0ba790e034f41150f2666c07ba?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/c7095a0ba790e034f41150f2666c07ba?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/c7095a0ba790e034f41150f2666c07ba?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>How To Create A Slider Dialog In Serenity (Part 3)</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/atom.xml" title="Jin&#39;s blog" type="application/atom+xml">
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/atom.xml">Rss</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2019/10/17/006-lookup-editor-pass-parameter-and-change-lookup-key/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2019/09/30/004-how-to-change-serenity-form-style-from-horizontal-to-vertical/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&text=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&title=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&is_video=false&description=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=How To Create A Slider Dialog In Serenity (Part 3)&body=Check out this article: https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&title=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&title=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&title=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&title=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&name=How To Create A Slider Dialog In Serenity (Part 3)&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problems"><span class="toc-number">1.</span> <span class="toc-text">Problems</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo"><span class="toc-number">2.</span> <span class="toc-text">Demo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-number">3.</span> <span class="toc-text">Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-use"><span class="toc-number">4.</span> <span class="toc-text">How to use</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        How To Create A Slider Dialog In Serenity (Part 3)
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Hung Vo</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-10-03T14:24:00.000Z" itemprop="datePublished">2019-10-03</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/serenity/">serenity</a> › <a class="category-link" href="/categories/typescript/">typescript</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/serenity/">serenity</a>, <a class="tag-link" href="/tags/serenity-dialog/">serenity-dialog</a>, <a class="tag-link" href="/tags/slider/">slider</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h2><p>I suggest first reading  and </p>
+<p>Slider dialog that I implemented basically is a panel dialog, for some reasons, Serenity will hide parent panel of your dialog when it opens new panel dialog.</p>
+<p>For example, if you open panel dialog when you click on a button on grid, it will hide your grid.</p>
+<p>And because it added some classes ( <code>.panel-hidden</code> ) to hide your “previous screen” so it was very hard and complex to handle that behavior on slider.</p>
+<p>It will look silly so I don’t want the slider dialog hide your previous screen.</p>
+<img src="/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/panel-hidden.png" title="Panel Hidden Issue">
+
+<p>One more problem with old code (part 2) is, when you transform your dialog (generic or panel) by slider dialog (by click on edit-link) and hit F5 to refresh your page, the gridview will be shrinked, it will be reset to full height after you close slider dialog.</p>
+<img src="/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/shrinked.png" title="Grid Is Shrinked">
+
+<p>With those problems, I decided re-implement slider dialog using generic dialog (jquery dialog) instead panel.</p>
+<p>By the way, some people want to add next/previous buttons into dialog to avoid switching from grid to form<br>So I also add a bit code to handle it, it’s not too neat but at least it works.</p>
+<img src="/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/next-previous-buttons.png" title="Next and Previous Buttons">
+
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p style="text-align: center">
+  <img src="/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/slider-dialog-with-next-previous-button-demo.gif" title="Slider dialog with next/previous button">
+  <br>
+  <i><a href="slider-dialog-with-next-previous-button-demo.mp4" target="_blank">Mp4 link</a></i>
+</p>
+
+
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><blockquote>
+<p>The code I show bellow will be used to replace old code from <code>part 1</code> and <code>part 2</code><br>so make sure that you revert old code if you added it before.</p>
+</blockquote>
+<p><strong>/Content/site/site.less</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.slider-full-height-width</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(~<span class="string">'100% - 10px'</span>) <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">display</span>: block <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: none <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border</span>: none <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Here I add class <code>.slider-full-height-width</code> and removed <code>.slider-dialog-force-show-target</code> class in previous posts.</p>
+<p>Next is the main character:</p>
+<p><strong>/Modules/Common/Helpers/MySlilerReveal.ts</strong></p>
+<script src="//gist.github.com/f0ad993d37b25ccb7cfd7d07a322de69.js?file=MySlilerReveal-part-3.ts"></script>
+
+<h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h2><p>This code will tranform current your dialog by slider dialog, just need to update your <code>editItem</code> method of class Serenity.EntityGrid&lt;&gt;</p>
+<script src="//gist.github.com/f0ad993d37b25ccb7cfd7d07a322de69.js?file=grid.ts"></script>
+
+<p>If you want to enable next/previous buttons I said above, just add 2 more line codes (line 26-27):</p>
+<script src="//gist.github.com/f0ad993d37b25ccb7cfd7d07a322de69.js?file=with-previous-next-buttons-grid.ts"></script>
+
+<p>Okay, how about to open slider dialog by <code>Id</code>, it is very simple:</p>
+<script src="//gist.github.com/f0ad993d37b25ccb7cfd7d07a322de69.js?file=dialog.ts"></script>
+
+<p>Done !</p>
+<p>Let me know if you have any problem, <a href="/about">contact me here</a> !</p>
+
+  </div>
+</article>
+
+<br />
+
+<div style="text-align: center">
+------------------------------------------------- <br />
+Let's share to be shared!
+</div>
+
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/atom.xml">Rss</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problems"><span class="toc-number">1.</span> <span class="toc-text">Problems</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo"><span class="toc-number">2.</span> <span class="toc-text">Demo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-number">3.</span> <span class="toc-text">Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-use"><span class="toc-number">4.</span> <span class="toc-text">How to use</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&text=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&title=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&is_video=false&description=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=How To Create A Slider Dialog In Serenity (Part 3)&body=Check out this article: https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&title=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&title=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&title=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&title=How To Create A Slider Dialog In Serenity (Part 3)"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://minhhungit.github.io/2019/10/03/005-how-to-create-slider-dialog-in-serenity-part-3/&name=How To Create A Slider Dialog In Serenity (Part 3)&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Hung Vo
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/atom.xml">Rss</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

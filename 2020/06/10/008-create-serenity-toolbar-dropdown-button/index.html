@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Sometime we will need to create a dropdown button on serenity toolbar, this is how I implement it. This plugin use bootstrap 3 dropdown so I will try to support some popular its features like header,">
+<meta name="keywords" content="serenity,dropdown,toolbar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Create Serenity Toolbar Dropdown Button">
+<meta property="og:url" content="https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/index.html">
+<meta property="og:site_name" content="Jin&#39;s blog">
+<meta property="og:description" content="Sometime we will need to create a dropdown button on serenity toolbar, this is how I implement it. This plugin use bootstrap 3 dropdown so I will try to support some popular its features like header,">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/demo-toolbar-dropdown-button.png">
+<meta property="og:updated_time" content="2020-06-10T14:53:34.844Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Create Serenity Toolbar Dropdown Button">
+<meta name="twitter:description" content="Sometime we will need to create a dropdown button on serenity toolbar, this is how I implement it. This plugin use bootstrap 3 dropdown so I will try to support some popular its features like header,">
+<meta name="twitter:image" content="https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/demo-toolbar-dropdown-button.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/c7095a0ba790e034f41150f2666c07ba?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/c7095a0ba790e034f41150f2666c07ba?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/c7095a0ba790e034f41150f2666c07ba?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Create Serenity Toolbar Dropdown Button</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/atom.xml" title="Jin&#39;s blog" type="application/atom+xml">
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/atom.xml">Rss</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2019/10/17/007-how-to-embed-gif-image-into-github-issue-or-wiki/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&text=Create Serenity Toolbar Dropdown Button"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&title=Create Serenity Toolbar Dropdown Button"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&is_video=false&description=Create Serenity Toolbar Dropdown Button"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Create Serenity Toolbar Dropdown Button&body=Check out this article: https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&title=Create Serenity Toolbar Dropdown Button"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&title=Create Serenity Toolbar Dropdown Button"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&title=Create Serenity Toolbar Dropdown Button"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&title=Create Serenity Toolbar Dropdown Button"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&name=Create Serenity Toolbar Dropdown Button&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo"><span class="toc-number">1.</span> <span class="toc-text">Demo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-number">2.</span> <span class="toc-text">Code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ToolDropdownButton-ts"><span class="toc-number">2.1.</span> <span class="toc-text">ToolDropdownButton.ts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Site-less"><span class="toc-number">2.2.</span> <span class="toc-text">Site.less</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Grid-ts"><span class="toc-number">2.3.</span> <span class="toc-text">Grid.ts</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Helper-Methods"><span class="toc-number">3.</span> <span class="toc-text">Helper Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-Dropdown-Button"><span class="toc-number">3.1.</span> <span class="toc-text">Enable Dropdown Button</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Remove-Dropdown-Item"><span class="toc-number">3.2.</span> <span class="toc-text">Remove Dropdown Item</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-Dropdown-Item"><span class="toc-number">3.3.</span> <span class="toc-text">Enable Dropdown Item</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-Dropdown-Item"><span class="toc-number">3.4.</span> <span class="toc-text">Add Dropdown Item</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bonus"><span class="toc-number">4.</span> <span class="toc-text">Bonus</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-SideButton-Item"><span class="toc-number">4.1.</span> <span class="toc-text">Add SideButton Item</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-SideButton"><span class="toc-number">4.2.</span> <span class="toc-text">Enable SideButton</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Create Serenity Toolbar Dropdown Button
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Hung Vo</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-06-10T13:34:00.000Z" itemprop="datePublished">2020-06-10</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/serenity/">serenity</a> › <a class="category-link" href="/categories/typescript/">typescript</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/dropdown/">dropdown</a>, <a class="tag-link" href="/tags/serenity/">serenity</a>, <a class="tag-link" href="/tags/toolbar/">toolbar</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Sometime we will need to create a dropdown button on serenity toolbar, this is how I implement it.</p>
+<p>This plugin use <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" target="_blank">bootstrap 3 dropdown</a> so I will try to support some popular its features like header, divider, disable/active item, dropdown position, dropup…</p>
+<p>The best way to explain how it works is learning from demo code</p>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><img src="/2020/06/10/008-create-serenity-toolbar-dropdown-button/demo-toolbar-dropdown-button.png" title="Serenity Toolbar Dropdown Button">
+
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><h3 id="ToolDropdownButton-ts"><a href="#ToolDropdownButton-ts" class="headerlink" title="ToolDropdownButton.ts"></a>ToolDropdownButton.ts</h3><p>Put this file somewhere for example /Modules/Common/Helper</p>
+<script src="//gist.github.com/15c1f79e262dca67228584badffeba5b.js?file=J.ToolDropdownButton.ts"></script>
+
+<h3 id="Site-less"><a href="#Site-less" class="headerlink" title="Site.less"></a>Site.less</h3><script src="//gist.github.com/15c1f79e262dca67228584badffeba5b.js?file=site.less"></script>
+
+<h3 id="Grid-ts"><a href="#Grid-ts" class="headerlink" title="Grid.ts"></a>Grid.ts</h3><script src="//gist.github.com/15c1f79e262dca67228584badffeba5b.js?file=initital-entity-grid.ts"></script>
+
+<h2 id="Helper-Methods"><a href="#Helper-Methods" class="headerlink" title="Helper Methods"></a>Helper Methods</h2><h3 id="Enable-Dropdown-Button"><a href="#Enable-Dropdown-Button" class="headerlink" title="Enable Dropdown Button"></a>Enable Dropdown Button</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.myToolDropdownButton.enableDropdown(<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Remove-Dropdown-Item"><a href="#Remove-Dropdown-Item" class="headerlink" title="Remove Dropdown Item"></a>Remove Dropdown Item</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.myToolDropdownButton.removeDropdownItem(<span class="string">"demo"</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Enable-Dropdown-Item"><a href="#Enable-Dropdown-Item" class="headerlink" title="Enable Dropdown Item"></a>Enable Dropdown Item</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.myToolDropdownButton.enableDropdownItemByKey(<span class="string">"powerpoint-key"</span>, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Add-Dropdown-Item"><a href="#Add-Dropdown-Item" class="headerlink" title="Add Dropdown Item"></a>Add Dropdown Item</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.myToolDropdownButton.addDropdownItem(&#123;</span><br><span class="line">	key: <span class="string">"manual-key"</span>,</span><br><span class="line">	title: <span class="string">'This item is added by manual'</span>,</span><br><span class="line">	icon: <span class="string">"fa fa-grav"</span>,</span><br><span class="line">	onClick: e =&gt; Q.alert(<span class="string">"MANUAL KEY IS PRESSED"</span>),</span><br><span class="line">&#125;, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Bonus"><a href="#Bonus" class="headerlink" title="Bonus"></a>Bonus</h2><p>If you want to create some buttons beside the dropdown button then try these methods:</p>
+<h3 id="Add-SideButton-Item"><a href="#Add-SideButton-Item" class="headerlink" title="Add SideButton Item"></a>Add SideButton Item</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.myToolDropdownButton.addSideButtonItem(&#123;</span><br><span class="line">	key: <span class="string">"demox"</span>,</span><br><span class="line">	title: <span class="string">'First Side Button'</span>,</span><br><span class="line">	icon: <span class="string">"fa fa-grav text-red"</span>,</span><br><span class="line">	cssClass: <span class="string">"text-blue"</span>,</span><br><span class="line">	onClick: e =&gt; Q.alert(<span class="string">"Hello first sidebutton"</span>),</span><br><span class="line">	disabled: <span class="literal">true</span></span><br><span class="line">&#125;, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Enable-SideButton"><a href="#Enable-SideButton" class="headerlink" title="Enable SideButton"></a>Enable SideButton</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.myToolDropdownButton.enableSideButtonByKey(<span class="string">"demox"</span>, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+  </div>
+</article>
+
+<br />
+
+<div style="text-align: center">
+------------------------------------------------- <br />
+Let's share to be shared!
+</div>
+
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/atom.xml">Rss</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo"><span class="toc-number">1.</span> <span class="toc-text">Demo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-number">2.</span> <span class="toc-text">Code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ToolDropdownButton-ts"><span class="toc-number">2.1.</span> <span class="toc-text">ToolDropdownButton.ts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Site-less"><span class="toc-number">2.2.</span> <span class="toc-text">Site.less</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Grid-ts"><span class="toc-number">2.3.</span> <span class="toc-text">Grid.ts</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Helper-Methods"><span class="toc-number">3.</span> <span class="toc-text">Helper Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-Dropdown-Button"><span class="toc-number">3.1.</span> <span class="toc-text">Enable Dropdown Button</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Remove-Dropdown-Item"><span class="toc-number">3.2.</span> <span class="toc-text">Remove Dropdown Item</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-Dropdown-Item"><span class="toc-number">3.3.</span> <span class="toc-text">Enable Dropdown Item</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-Dropdown-Item"><span class="toc-number">3.4.</span> <span class="toc-text">Add Dropdown Item</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bonus"><span class="toc-number">4.</span> <span class="toc-text">Bonus</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-SideButton-Item"><span class="toc-number">4.1.</span> <span class="toc-text">Add SideButton Item</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-SideButton"><span class="toc-number">4.2.</span> <span class="toc-text">Enable SideButton</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&text=Create Serenity Toolbar Dropdown Button"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&title=Create Serenity Toolbar Dropdown Button"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&is_video=false&description=Create Serenity Toolbar Dropdown Button"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Create Serenity Toolbar Dropdown Button&body=Check out this article: https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&title=Create Serenity Toolbar Dropdown Button"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&title=Create Serenity Toolbar Dropdown Button"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&title=Create Serenity Toolbar Dropdown Button"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&title=Create Serenity Toolbar Dropdown Button"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://minhhungit.github.io/2020/06/10/008-create-serenity-toolbar-dropdown-button/&name=Create Serenity Toolbar Dropdown Button&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Hung Vo
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/atom.xml">Rss</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
