@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jin&#39;s blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://minhhungit.github.io/"/>
+  <updated>2020-06-10T13:10:37.523Z</updated>
+  <id>https://minhhungit.github.io/</id>
+  
+  <author>
+    <name>Hung Vo</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How To Embed Gif Image Into Github Issue/Wiki</title>
+    <link href="https://minhhungit.github.io/2019/10/17/how-to-embed-gif-image-into-github-issue-or-wiki/"/>
+    <id>https://minhhungit.github.io/2019/10/17/how-to-embed-gif-image-into-github-issue-or-wiki/</id>
+    <published>2019-10-17T02:30:00.000Z</published>
+    <updated>2020-06-10T13:10:37.523Z</updated>
+    
+    <content type="html"><![CDATA[<p>Use this:</p><p><code>![](put-your-gif-link-here.gif)</code></p><p>Demo:</p><img src="/2019/10/17/how-to-embed-gif-image-into-github-issue-or-wiki/gif-github.gif"><p>Btw you can upload your gif on <a href="https://giphy.com/" target="_blank" rel="noopener">giphy</a> and get link.</p><p>That’s it!</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Use this:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;![](put-your-gif-link-here.gif)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Demo:&lt;/p&gt;
+&lt;img src=&quot;/2019/10/17/how-to-embed-gif-image-into-github-i
+      
+    
+    </summary>
+    
+    
+      <category term="github" scheme="https://minhhungit.github.io/categories/github/"/>
+    
+      <category term="markdown" scheme="https://minhhungit.github.io/categories/markdown/"/>
+    
+    
+      <category term="github" scheme="https://minhhungit.github.io/tags/github/"/>
+    
+      <category term="gif image" scheme="https://minhhungit.github.io/tags/gif-image/"/>
+    
+      <category term="markdown" scheme="https://minhhungit.github.io/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Serenity LookupEditor - Pass Parameter And Change LookupKey</title>
+    <link href="https://minhhungit.github.io/2019/10/17/lookup-editor-pass-parameter-and-change-lookup-key/"/>
+    <id>https://minhhungit.github.io/2019/10/17/lookup-editor-pass-parameter-and-change-lookup-key/</id>
+    <published>2019-10-17T02:08:00.000Z</published>
+    <updated>2020-06-10T13:10:37.526Z</updated>
+    
+    <content type="html"><![CDATA[<p>This post I will show you guys how to pass parameter into lookup editor, filter lookup items or change lookup key by parameter’s value</p><p>Demo:</p><img src="/2019/10/17/lookup-editor-pass-parameter-and-change-lookup-key/lookup-chang-key-and-pass-parameter.gif"><p>We will need to create a custom lookup editor by typescript, build solution and generate t4 template then use it for your lookup field.</p><p>Demo just has 2 fields, a radio button (Enum type) and dropdown (lookup editor).</p><p>When user changes radio button value, we will reset lookup items corresponding.</p><p><code>MyLookupEditor.ts</code></p><script src="//gist.github.com/fb60bfc0c4bbbe82bca8518e27f2c2db.js?file=MyLookupEditor.ts"></script><p><code>MyEnum</code></p><script src="//gist.github.com/fb60bfc0c4bbbe82bca8518e27f2c2db.js?file=MyEnum.cs"></script><p><code>Row.cs</code></p><script src="//gist.github.com/fb60bfc0c4bbbe82bca8518e27f2c2db.js?file=Row.cs"></script><p><code>Form.cs</code></p><script src="//gist.github.com/fb60bfc0c4bbbe82bca8518e27f2c2db.js?file=Form.cs"></script><p><code>Dialog.ts</code></p><script src="//gist.github.com/fb60bfc0c4bbbe82bca8518e27f2c2db.js?file=Dialog.ts"></script><p>Done!</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This post I will show you guys how to pass parameter into lookup editor, filter lookup items or change lookup key by parameter’s value&lt;/p
+      
+    
+    </summary>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
+    
+      <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/tags/serenity/"/>
+    
+      <category term="lookup editor" scheme="https://minhhungit.github.io/tags/lookup-editor/"/>
+    
+      <category term="lookup key" scheme="https://minhhungit.github.io/tags/lookup-key/"/>
+    
+      <category term="pass parameter" scheme="https://minhhungit.github.io/tags/pass-parameter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How To Create A Slider Dialog In Serenity (Part 3)</title>
+    <link href="https://minhhungit.github.io/2019/10/03/how-to-create-slider-dialog-in-serenity-part-3/"/>
+    <id>https://minhhungit.github.io/2019/10/03/how-to-create-slider-dialog-in-serenity-part-3/</id>
+    <published>2019-10-03T14:24:00.000Z</published>
+    <updated>2020-06-10T13:10:37.513Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h2><p>I suggest first reading <a href="/2019/09/26/how-to-create-slider-dialog-in-serenity-part-1/" title="Part 1">Part 1</a> and <a href="/2019/09/29/how-to-create-slider-dialog-in-serenity-part-2/" title="Part 2">Part 2</a></p><p>Slider dialog that I implemented basically is a panel dialog, for some reasons, Serenity will hide parent panel of your dialog when it opens new panel dialog.</p><p>For example, if you open panel dialog when you click on a button on grid, it will hide your grid.</p><p>And because it added some classes ( <code>.panel-hidden</code> ) to hide your “previous screen” so it was very hard and complex to handle that behavior on slider.</p><p>It will look silly so I don’t want the slider dialog hide your previous screen.</p><img src="/2019/10/03/how-to-create-slider-dialog-in-serenity-part-3/panel-hidden.png" title="Panel Hidden Issue"><p>One more problem with old code (part 2) is, when you transform your dialog (generic or panel) by slider dialog (by click on edit-link) and hit F5 to refresh your page, the gridview will be shrinked, it will be reset to full height after you close slider dialog.</p><img src="/2019/10/03/how-to-create-slider-dialog-in-serenity-part-3/shrinked.png" title="Grid Is Shrinked"><p>With those problems, I decided re-implement slider dialog using generic dialog (jquery dialog) instead panel.</p><p>By the way, some people want to add next/previous buttons into dialog to avoid switching from grid to form<br>So I also add a bit code to handle it, it’s not too neat but at least it works.</p><img src="/2019/10/03/how-to-create-slider-dialog-in-serenity-part-3/next-previous-buttons.png" title="Next and Previous Buttons"><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p style="text-align: center">  <img src="/2019/10/03/how-to-create-slider-dialog-in-serenity-part-3/slider-dialog-with-next-previous-button-demo.gif" title="Slider dialog with next/previous button">  <br>  <i><a href="slider-dialog-with-next-previous-button-demo.mp4" target="_blank">Mp4 link</a></i></p><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><blockquote><p>The code I show bellow will be used to replace old code from <code>part 1</code> and <code>part 2</code><br>so make sure that you revert old code if you added it before.</p></blockquote><p><strong>/Content/site/site.less</strong></p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.slider-full-height-width</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(~<span class="string">'100% - 10px'</span>) <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">display</span>: block <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: none <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border</span>: none <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Here I add class <code>.slider-full-height-width</code> and removed <code>.slider-dialog-force-show-target</code> class in previous posts.</p><p>Next is the main character:</p><p><strong>/Modules/Common/Helpers/MySlilerReveal.ts</strong></p><script src="//gist.github.com/f0ad993d37b25ccb7cfd7d07a322de69.js?file=MySlilerReveal-part-3.ts"></script><h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h2><p>This code will tranform current your dialog by slider dialog, just need to update your <code>editItem</code> method of class Serenity.EntityGrid&lt;&gt;</p><script src="//gist.github.com/f0ad993d37b25ccb7cfd7d07a322de69.js?file=grid.ts"></script><p>If you want to enable next/previous buttons I said above, just add 2 more line codes (line 26-27):</p><script src="//gist.github.com/f0ad993d37b25ccb7cfd7d07a322de69.js?file=with-previous-next-buttons-grid.ts"></script><p>Okay, how about to open slider dialog by <code>Id</code>, it is very simple:</p><script src="//gist.github.com/f0ad993d37b25ccb7cfd7d07a322de69.js?file=dialog.ts"></script><p>Done !</p><p>Let me know if you have any problem, <a href="/about">contact me here</a> !</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Problems&quot;&gt;&lt;a href=&quot;#Problems&quot; class=&quot;headerlink&quot; title=&quot;Problems&quot;&gt;&lt;/a&gt;Problems&lt;/h2&gt;&lt;p&gt;I suggest first reading &lt;a href=&quot;/2019/09/26/h
+      
+    
+    </summary>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
+    
+      <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/tags/serenity/"/>
+    
+      <category term="slider" scheme="https://minhhungit.github.io/tags/slider/"/>
+    
+      <category term="serenity-dialog" scheme="https://minhhungit.github.io/tags/serenity-dialog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How To Change Serenity Form&#39;s Style From Horizontal To Vertical</title>
+    <link href="https://minhhungit.github.io/2019/09/30/how-to-change-serenity-form-style-from-horizontal-to-vertical/"/>
+    <id>https://minhhungit.github.io/2019/09/30/how-to-change-serenity-form-style-from-horizontal-to-vertical/</id>
+    <published>2019-09-29T23:26:00.000Z</published>
+    <updated>2020-06-10T13:10:37.473Z</updated>
+    
+    <content type="html"><![CDATA[<p>Serenity generates <code>form</code> very flexible, we can custom category, tab, <a href="https://serenity.is/blog/2018/05/16/multi-column-layout" target="_blank" rel="noopener">column layout</a> and much more…<br>But currently it just support horizontal form like this:</p><img src="/2019/09/30/how-to-change-serenity-form-style-from-horizontal-to-vertical/horizontal-form.png"><p>Luckily I know a way to change it to vertical style, demo image:</p><img src="/2019/09/30/how-to-change-serenity-form-style-from-horizontal-to-vertical/vertical-form.png"><p>You just need to put bellow code into your <code>\Content\site\site.less</code> then build solution</p><script src="//gist.github.com/be1b81b780574d715923ee467642eefa.js?file=serenity-vertical-form-one-dialog"></script><blockquote><p>Here <code>.s-Supplier-SupplierDialog</code> is class name of your dialog.</p></blockquote><p>Okay, but that is just applied for only one dialog (SupplierDialog), right? Yes, correct!</p><p>If you want to apply it for all dialogs in your Serenity project, use bellow css:</p><script src="//gist.github.com/be1b81b780574d715923ee467642eefa.js?file=serenity-vertical-form-all-dialogs"></script><p>I strongly recommend that you should change style for some specific dialogs, for dialog that has many fields in your form, vertical style will look a mess.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Serenity generates &lt;code&gt;form&lt;/code&gt; very flexible, we can custom category, tab, &lt;a href=&quot;https://serenity.is/blog/2018/05/16/multi-colum
+      
+    
+    </summary>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
+    
+      <category term="css" scheme="https://minhhungit.github.io/categories/css/"/>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/tags/serenity/"/>
+    
+      <category term="horizontal-form" scheme="https://minhhungit.github.io/tags/horizontal-form/"/>
+    
+      <category term="vertical-form" scheme="https://minhhungit.github.io/tags/vertical-form/"/>
+    
+      <category term="css-flex" scheme="https://minhhungit.github.io/tags/css-flex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How To Create A Slider Dialog In Serenity (Part 2)</title>
+    <link href="https://minhhungit.github.io/2019/09/29/how-to-create-slider-dialog-in-serenity-part-2/"/>
+    <id>https://minhhungit.github.io/2019/09/29/how-to-create-slider-dialog-in-serenity-part-2/</id>
+    <published>2019-09-29T04:39:05.000Z</published>
+    <updated>2020-06-10T13:10:37.500Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Back-to-the-future-D"><a href="#Back-to-the-future-D" class="headerlink" title="Back to the future :D"></a>Back to the future :D</h2><p>In <a href="/2019/09/26/how-to-create-slider-dialog-in-serenity-part-1/" title="my previous post">my previous post</a> we implemented a simple way to create a slider dialog when you click on a button on Serenity’s grid toolbar.</p><p>It works pretty well right? No, it doesn’t. LOL :D</p><p>If you open slider dialog on a button that is placed on generic/panel dialog it will cause problem.<br>If you have a button on your slider dialog and the button also show a new generic/panel dialog or even a slider dialog then you also get problem too.</p><p>It can make your grid/panel dialog goes away or dialog/child dialog has z-index issue,<br>your normal dialogs will be place under of your slider dialog so you can not interact with it.</p><p>The reason is Slider Dialog basically is a Serenity panel dialog, if it is a panel dialog, Serenity will hide the parent of dialog.</p><p>Check more here:</p><figure class="highlight csharp"><figcaption><span>Serenity Framework</span><a href="https://github.com/volkanceylan/Serenity/blob/48b7a2135311123f6876b45a553b77b3e8833315/Serenity.Scripts/CoreLib/UI/Dialogs/TemplatedDialog.ts#L217-L236" target="_blank" rel="noopener">TemplatedDialog.ts</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (container.length) &#123;</span><br><span class="line">    container = container.last();</span><br><span class="line">    container.children()</span><br><span class="line">        .not(element)</span><br><span class="line">        .not(<span class="string">'.panel-hidden'</span>)</span><br><span class="line">        .addClass(<span class="string">'panel-hidden panel-hidden-'</span> + uniqueName);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (element[<span class="number">0</span>].parentElement !== container[<span class="number">0</span>])</span><br><span class="line">         element.appendTo(container);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$(<span class="string">'.ui-dialog:visible, .ui-widget-overlay:visible'</span>)</span><br><span class="line">    .not(element)</span><br><span class="line">    .addClass(<span class="string">'panel-hidden panel-hidden-'</span> + uniqueName);</span><br><span class="line"></span><br><span class="line">element</span><br><span class="line">    .removeClass(<span class="string">'hidden'</span>)</span><br><span class="line">    .removeClass(<span class="string">'panel-hidden'</span>)</span><br><span class="line">    .addClass(<span class="string">'s-Panel'</span>)</span><br><span class="line">    .trigger(<span class="string">'panelopen'</span>);</span><br></pre></td></tr></table></figure><p>You should try to implement my previous post and open slider dialog on generic dialog/panel dialog or inside a slider dialog you will see what I am saying.</p><p>In a nutshell, this post will try to fix those issues!</p><p>I’m very lazy (actually my English is not good) so I just show my code, the rest is your work ^^</p><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><img src="/2019/09/29/how-to-create-slider-dialog-in-serenity-part-2/right-slider-part-2.gif" title="Inner Slider Dialog Demo"><h2 id="Copy-paste"><a href="#Copy-paste" class="headerlink" title="Copy/paste"></a>Copy/paste</h2><p><strong>/Content/site/site.less</strong></p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.slider-container</span> <span class="selector-class">.s-Panel</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: none <span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.slider-dialog-force-show-target</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: block <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>/Modules/Common/Helpers/MySlilerReveal.ts</strong></p><script src="//gist.github.com/428b7a3e28e4ca56b4aa6f8123332488.js?file=MySlilerReveal-part-2"></script><p><strong>Modules/Product/Product/ProductDialog.ts</strong></p><script src="//gist.github.com/428b7a3e28e4ca56b4aa6f8123332488.js?file=ProductDialog.ts"></script><p>Done! Let me know if you have any issue. I will try to check if I have time.</p><p>And don’t forget to correct my English mistakes.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Back-to-the-future-D&quot;&gt;&lt;a href=&quot;#Back-to-the-future-D&quot; class=&quot;headerlink&quot; title=&quot;Back to the future :D&quot;&gt;&lt;/a&gt;Back to the future :D&lt;/h2
+      
+    
+    </summary>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
+    
+      <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/tags/serenity/"/>
+    
+      <category term="slider" scheme="https://minhhungit.github.io/tags/slider/"/>
+    
+      <category term="serenity-dialog" scheme="https://minhhungit.github.io/tags/serenity-dialog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How To Create A Slider Dialog In Serenity (Part 1)</title>
+    <link href="https://minhhungit.github.io/2019/09/26/how-to-create-slider-dialog-in-serenity-part-1/"/>
+    <id>https://minhhungit.github.io/2019/09/26/how-to-create-slider-dialog-in-serenity-part-1/</id>
+    <published>2019-09-26T04:29:01.000Z</published>
+    <updated>2020-06-10T13:10:37.476Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>Currently, at the point I write this post, the latest Sereity’s version is 3.9.8, Serenity just have 2 types of dialog,<br>they are a generic dialog (using jquery dialog) and panel dialog.</p><p style="text-align: center">  <img src="/2019/09/26/how-to-create-slider-dialog-in-serenity-part-1/generic-dialog.jpg" title="Generic Dialog">  <i>Generic Dialog</i></p><p style="text-align: center">  <img src="/2019/09/26/how-to-create-slider-dialog-in-serenity-part-1/panel-dialog.jpg" title="Panel Dialog">  <br>  <i>Panel Dialog</i></p><p>With Startsharp version, they also provide you a feature that you can open dialog directly on grid (side by side), it’s called <strong><code>Entity Grid Dialog</code></strong></p><img src="/2019/09/26/how-to-create-slider-dialog-in-serenity-part-1/entity-grid-dialog.jpg" title="Entity Grid Dialog"><p>I personality want to use new style - a slider which I can open dialog directly from menu button on header (like open a Setting panel)</p><p>This post I will show you how to implement and use it to replace current dialog’s styles but you can also do it like I said if you want easily</p><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><img src="/2019/09/26/how-to-create-slider-dialog-in-serenity-part-1/right-slider-with-entity-dialog.gif" title="Slider Dialog"><h2 id="Implementing"><a href="#Implementing" class="headerlink" title="Implementing"></a>Implementing</h2><p>Okay, so how ? we will implement slider dialog using <a href="https://github.com/nnattawat/slideReveal" target="_blank" rel="noopener">slideReveal</a> library, firstly download and include it into project</p><img src="/2019/09/26/how-to-create-slider-dialog-in-serenity-part-1/add-slidereveal-library.jpg" title="Add slideReveal library.jpg"><p>Create <code>MySlilerReveal.ts</code> file and put it into <code>~/Modules/Common/Helpers</code></p><script src="//gist.github.com/c47e7deda04eeec7c52924eab3cba1e6.js?file=MySlilerReveal.ts"></script><p>To replace current styles, just put this bellow code into your <code>grid.ts</code> file</p><script src="//gist.github.com/c47e7deda04eeec7c52924eab3cba1e6.js?file=ProductGrid.ts"></script><p>That’s it!</p><p>Feel free to ask any questions :heart:</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Introduce&quot;&gt;&lt;a href=&quot;#Introduce&quot; class=&quot;headerlink&quot; title=&quot;Introduce&quot;&gt;&lt;/a&gt;Introduce&lt;/h2&gt;&lt;p&gt;Currently, at the point I write this post,
+      
+    
+    </summary>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
+    
+      <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/tags/serenity/"/>
+    
+      <category term="slider" scheme="https://minhhungit.github.io/tags/slider/"/>
+    
+      <category term="serenity-dialog" scheme="https://minhhungit.github.io/tags/serenity-dialog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Serenity FileUploadEditor Confirmation</title>
+    <link href="https://minhhungit.github.io/2019/09/21/serenity-file-upload-editor-confirmation/"/>
+    <id>https://minhhungit.github.io/2019/09/21/serenity-file-upload-editor-confirmation/</id>
+    <published>2019-09-21T11:39:01.000Z</published>
+    <updated>2020-06-10T13:10:37.528Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hi guys, this post will show you how to implement Confirmation feature for <a href="https://github.com/volkanceylan/Serenity" target="_blank" rel="noopener">Serenity</a>‘s FileUploadEditor</p><p>=&gt; <strong>Requirements:</strong></p><ul><li>If uploader has no file selected, don’t show confirmation box</li><li>If we selected files, we want to choose difference files then it should show confirmation box with message:<blockquote><p>This will overwrite the current file. Are you sure you want to continue?</p></blockquote></li></ul><p><strong>Demo:</strong></p><img src="/2019/09/21/serenity-file-upload-editor-confirmation/file-upload-confirmation.gif"><p><strong>Code:</strong></p><script src="//gist.github.com/702af50333ca65405d01e78514a5af80.js"></script><p>Happy coding!</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Hi guys, this post will show you how to implement Confirmation feature for &lt;a href=&quot;https://github.com/volkanceylan/Serenity&quot; target=&quot;_bl
+      
+    
+    </summary>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
+    
+      <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/tags/serenity/"/>
+    
+      <category term="file-upload-editor" scheme="https://minhhungit.github.io/tags/file-upload-editor/"/>
+    
+      <category term="confirmation" scheme="https://minhhungit.github.io/tags/confirmation/"/>
+    
+  </entry>
+  
+</feed>
