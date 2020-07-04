@@ -971,6 +971,7 @@ code {
 }
 .article-summary .article-summary-inner .thumbnail .comment-counter {
   right: 0;
+  display: none !important;
   top: 15px;
   color: #fff;
   font-size: 12px;
