@@ -156,7 +156,7 @@
     <link href="https://minhhungit.github.io/2019/09/30/004-how-to-change-serenity-form-style-from-horizontal-to-vertical/"/>
     <id>https://minhhungit.github.io/2019/09/30/004-how-to-change-serenity-form-style-from-horizontal-to-vertical/</id>
     <published>2019-09-29T23:26:00.000Z</published>
-    <updated>2020-06-10T13:10:37.473Z</updated>
+    <updated>2020-07-04T03:18:22.426Z</updated>
     
     <content type="html"><![CDATA[<p>Serenity generates <code>form</code> very flexible, we can custom category, tab, <a href="https://serenity.is/blog/2018/05/16/multi-column-layout" target="_blank" rel="noopener">column layout</a> and much more…<br>But currently it just support horizontal form like this:</p><p>Luckily I know a way to change it to vertical style, demo image:</p><p>You just need to put bellow code into your <code>\Content\site\site.less</code> then build solution</p><script src="//gist.github.com/be1b81b780574d715923ee467642eefa.js?file=serenity-vertical-form-one-dialog"></script><blockquote><p>Here <code>.s-Supplier-SupplierDialog</code> is class name of your dialog.</p></blockquote><p>Okay, but that is just applied for only one dialog (SupplierDialog), right? Yes, correct!</p><p>If you want to apply it for all dialogs in your Serenity project, use bellow css:</p><script src="//gist.github.com/be1b81b780574d715923ee467642eefa.js?file=serenity-vertical-form-all-dialogs"></script><p>I strongly recommend that you should change style for some specific dialogs, for dialog that has many fields in your form, vertical style will look a mess.</p>]]></content>
     
