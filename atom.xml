@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minhhungit.github.io/"/>
-  <updated>2020-06-10T15:07:45.454Z</updated>
+  <updated>2020-08-06T14:30:54.031Z</updated>
   <id>https://minhhungit.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Implement Helping Button Using Popover Bootstrap 3 On Serenity Form</title>
+    <link href="https://minhhungit.github.io/2020/08/06/009-implement-helping-button-using-popover-bootstrap-3-on-serenity-form/"/>
+    <id>https://minhhungit.github.io/2020/08/06/009-implement-helping-button-using-popover-bootstrap-3-on-serenity-form/</id>
+    <published>2020-08-06T14:06:00.000Z</published>
+    <updated>2020-08-06T14:30:54.031Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><img src="/2020/08/06/009-implement-helping-button-using-popover-bootstrap-3-on-serenity-form/popover-button.gif"><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><h3 id="J-HelpPopover-ts"><a href="#J-HelpPopover-ts" class="headerlink" title="J.HelpPopover.ts"></a>J.HelpPopover.ts</h3><script src="//gist.github.com/4915e4d6cf96c9868a7648f7d2f7cacd.js?file=J.HelpPopover.ts"></script><h3 id="J-HelpPopoverAttribute-cs"><a href="#J-HelpPopoverAttribute-cs" class="headerlink" title="J.HelpPopoverAttribute.cs"></a>J.HelpPopoverAttribute.cs</h3><script src="//gist.github.com/4915e4d6cf96c9868a7648f7d2f7cacd.js?file=J.HelpPopoverAttribute.cs"></script><h3 id="site-less"><a href="#site-less" class="headerlink" title="site.less"></a>site.less</h3><script src="//gist.github.com/4915e4d6cf96c9868a7648f7d2f7cacd.js?file=site.less"></script><h3 id="YourDialog-ts"><a href="#YourDialog-ts" class="headerlink" title="YourDialog.ts"></a>YourDialog.ts</h3><script src="//gist.github.com/4915e4d6cf96c9868a7648f7d2f7cacd.js?file=YourDialog.ts"></script><h3 id="YourForm-cs"><a href="#YourForm-cs" class="headerlink" title="YourForm.cs"></a>YourForm.cs</h3><script src="//gist.github.com/4915e4d6cf96c9868a7648f7d2f7cacd.js?file=YourForm.cs"></script><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul><li><a href="https://bootstrapdocs.com/v3.3.6/docs/javascript/#popovers" target="_blank" rel="noopener">https://bootstrapdocs.com/v3.3.6/docs/javascript/#popovers</a></li><li><a href="https://github.com/volkanceylan/Serenity/issues/2922" target="_blank" rel="noopener">https://github.com/volkanceylan/Serenity/issues/2922</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Demo&quot;&gt;&lt;a href=&quot;#Demo&quot; class=&quot;headerlink&quot; title=&quot;Demo&quot;&gt;&lt;/a&gt;Demo&lt;/h2&gt;&lt;img src=&quot;/2020/08/06/009-implement-helping-button-using-popover-
+      
+    
+    </summary>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
+    
+      <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
+    
+      <category term="bootstrap" scheme="https://minhhungit.github.io/categories/bootstrap/"/>
+    
+    
+      <category term="popover" scheme="https://minhhungit.github.io/tags/popover/"/>
+    
+      <category term="bootstrap" scheme="https://minhhungit.github.io/tags/bootstrap/"/>
+    
+      <category term="serenity-form" scheme="https://minhhungit.github.io/tags/serenity-form/"/>
+    
+  </entry>
   
   <entry>
     <title>Create Serenity Toolbar Dropdown Button</title>
