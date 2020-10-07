@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minhhungit.github.io/"/>
-  <updated>2020-10-07T03:18:27.909Z</updated>
+  <updated>2020-10-07T03:22:51.869Z</updated>
   <id>https://minhhungit.github.io/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Adding slickgrid column in Serenity</title>
-    <link href="https://minhhungit.github.io/2020/10/07/010-adding-slickgrid-column-in-serenity/"/>
-    <id>https://minhhungit.github.io/2020/10/07/010-adding-slickgrid-column-in-serenity/</id>
+    <title>Adding slickgrid column in Serenity dynamically</title>
+    <link href="https://minhhungit.github.io/2020/10/07/010-adding-slickgrid-column-in-serenity-dynamically/"/>
+    <id>https://minhhungit.github.io/2020/10/07/010-adding-slickgrid-column-in-serenity-dynamically/</id>
     <published>2020-10-07T03:14:00.000Z</published>
-    <updated>2020-10-07T03:18:27.909Z</updated>
+    <updated>2020-10-07T03:22:51.869Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Grid-ts"><a href="#Grid-ts" class="headerlink" title="Grid.ts"></a>Grid.ts</h3><script src="//gist.github.com/f94708977849839bdcd3d1b0d8b30a71.js?file=Grid.ts"></script><h3 id="DemoMyFormatter-ts"><a href="#DemoMyFormatter-ts" class="headerlink" title="DemoMyFormatter.ts"></a>DemoMyFormatter.ts</h3><script src="//gist.github.com/f94708977849839bdcd3d1b0d8b30a71.js?file=DemoMyFormatter.ts"></script><h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><img src="/2020/10/07/010-adding-slickgrid-column-in-serenity/slickgrid-column-adding-removing.gif">]]></content>
+    <content type="html"><![CDATA[<h3 id="Grid-ts"><a href="#Grid-ts" class="headerlink" title="Grid.ts"></a>Grid.ts</h3><script src="//gist.github.com/f94708977849839bdcd3d1b0d8b30a71.js?file=Grid.ts"></script><h3 id="DemoMyFormatter-ts"><a href="#DemoMyFormatter-ts" class="headerlink" title="DemoMyFormatter.ts"></a>DemoMyFormatter.ts</h3><script src="//gist.github.com/f94708977849839bdcd3d1b0d8b30a71.js?file=DemoMyFormatter.ts"></script><h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><img src="/2020/10/07/010-adding-slickgrid-column-in-serenity-dynamically/slickgrid-column-adding-removing.gif">]]></content>
     
     <summary type="html">
     
