@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minhhungit.github.io/"/>
-  <updated>2020-10-07T03:22:51.869Z</updated>
+  <updated>2020-10-16T00:12:54.034Z</updated>
   <id>https://minhhungit.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Keep menu toggle state after page reload</title>
+    <link href="https://minhhungit.github.io/2020/10/16/011-keep-menu-toggle-state-after-page-reload/"/>
+    <id>https://minhhungit.github.io/2020/10/16/011-keep-menu-toggle-state-after-page-reload/</id>
+    <published>2020-10-15T23:32:00.000Z</published>
+    <updated>2020-10-16T00:12:54.034Z</updated>
+    
+    <content type="html"><![CDATA[<p>I saw some users need to keep left menu toggle state after page reload, the idea is quite simple, we need something to keep state, localStorage is a good candidate.</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage</a></p><p>As usual, here is demo:</p><img src="/2020/10/16/011-keep-menu-toggle-state-after-page-reload/side-menu-keep-state-demo.gif"><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>As you see in demo, when we hit menu toggle button on top left page, it will toggle <code>sidebar-collapse</code> class of <code>body</code> tag.<br>We need to store this state into localStorage and re-set it when page is reloaded.</p><h3 id="Modules-Common-J-ts"><a href="#Modules-Common-J-ts" class="headerlink" title="Modules/Common/J.ts"></a>Modules/Common/J.ts</h3><p>We will need two helper methods to work with localStorage</p><script src="//gist.github.com/54367f416d589e707e42a04772a2ef63.js?file=J.ts"></script><h3 id="Views-Shared-Layout-cshtml"><a href="#Views-Shared-Layout-cshtml" class="headerlink" title="Views/Shared/_Layout.cshtml"></a>Views/Shared/_Layout.cshtml</h3><p>Near bottom of _Layout.cshtml file, we will handle click event of toggle button and store state into storage with key <code>IS_SIDEBAR_COLLAPSE</code></p><script src="//gist.github.com/54367f416d589e707e42a04772a2ef63.js?file=_Layout.cshtml"></script><h3 id="Views-Shared-LeftNavigation-cshtml"><a href="#Views-Shared-LeftNavigation-cshtml" class="headerlink" title="Views/Shared/LeftNavigation.cshtml"></a>Views/Shared/LeftNavigation.cshtml</h3><p>The rest is getting state from storage with key <code>IS_SIDEBAR_COLLAPSE</code> and toogle class <code>sidebar-collapse</code> for <code>body</code> tag</p><script src="//gist.github.com/54367f416d589e707e42a04772a2ef63.js?file=LeftNavigation.cshtml"></script><p>That’s it !</p><h3 id="Bonus"><a href="#Bonus" class="headerlink" title="Bonus"></a>Bonus</h3><p>If you don’t want side menu push right panel everytime we hover mouse pointer on the menu then we can remove <code>fixed</code> class of <code>body</code> tag, the result will be something like this:</p><img src="/2020/10/16/011-keep-menu-toggle-state-after-page-reload/side-menu-remove-fixed-class.gif"><p>It’s not too bad I guess :)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I saw some users need to keep left menu toggle state after page reload, the idea is quite simple, we need something to keep state, localS
+      
+    
+    </summary>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
+    
+      <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
+    
+      <category term="navigation" scheme="https://minhhungit.github.io/categories/navigation/"/>
+    
+      <category term="local-storage" scheme="https://minhhungit.github.io/categories/local-storage/"/>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/tags/serenity/"/>
+    
+      <category term="navigation" scheme="https://minhhungit.github.io/tags/navigation/"/>
+    
+      <category term="local-storage" scheme="https://minhhungit.github.io/tags/local-storage/"/>
+    
+  </entry>
   
   <entry>
     <title>Adding slickgrid column in Serenity dynamically</title>
@@ -314,38 +350,6 @@
       <category term="slider" scheme="https://minhhungit.github.io/tags/slider/"/>
     
       <category term="serenity-dialog" scheme="https://minhhungit.github.io/tags/serenity-dialog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Serenity FileUploadEditor Confirmation</title>
-    <link href="https://minhhungit.github.io/2019/09/21/001-serenity-file-upload-editor-confirmation/"/>
-    <id>https://minhhungit.github.io/2019/09/21/001-serenity-file-upload-editor-confirmation/</id>
-    <published>2019-09-21T11:39:01.000Z</published>
-    <updated>2020-06-10T13:10:37.528Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hi guys, this post will show you how to implement Confirmation feature for <a href="https://github.com/volkanceylan/Serenity" target="_blank" rel="noopener">Serenity</a>‘s FileUploadEditor</p><p>=&gt; <strong>Requirements:</strong></p><ul><li>If uploader has no file selected, don’t show confirmation box</li><li>If we selected files, we want to choose difference files then it should show confirmation box with message:<blockquote><p>This will overwrite the current file. Are you sure you want to continue?</p></blockquote></li></ul><p><strong>Demo:</strong></p><img src="/2019/09/21/001-serenity-file-upload-editor-confirmation/file-upload-confirmation.gif"><p><strong>Code:</strong></p><script src="//gist.github.com/702af50333ca65405d01e78514a5af80.js"></script><p>Happy coding!</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Hi guys, this post will show you how to implement Confirmation feature for &lt;a href=&quot;https://github.com/volkanceylan/Serenity&quot; target=&quot;_bl
-      
-    
-    </summary>
-    
-    
-      <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
-    
-      <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
-    
-    
-      <category term="serenity" scheme="https://minhhungit.github.io/tags/serenity/"/>
-    
-      <category term="file-upload-editor" scheme="https://minhhungit.github.io/tags/file-upload-editor/"/>
-    
-      <category term="confirmation" scheme="https://minhhungit.github.io/tags/confirmation/"/>
     
   </entry>
   
