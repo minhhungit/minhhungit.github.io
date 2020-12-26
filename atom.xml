@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://minhhungit.github.io/"/>
-  <updated>2020-10-16T00:12:54.034Z</updated>
+  <updated>2020-12-26T18:02:13.811Z</updated>
   <id>https://minhhungit.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introduce A Dashboard Widget System For Serenity Framework</title>
+    <link href="https://minhhungit.github.io/2020/12/26/012-introduce-dashboard-widget-system/"/>
+    <id>https://minhhungit.github.io/2020/12/26/012-introduce-dashboard-widget-system/</id>
+    <published>2020-12-26T15:21:00.000Z</published>
+    <updated>2020-12-26T18:02:13.811Z</updated>
+    
+    <content type="html"><![CDATA[<p>I created dashboard widget system which will help developer create their own widgets easy for Serenity framework</p><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><video width="100%" height="250px" controls><source src="/2020/12/26/012-introduce-dashboard-widget-system/dashboard-demo.mp4 " type="video/mp4"> Your browser does not support html5 video.</video><h2 id="Features"><a href="#Features" class="headerlink" title="Features:"></a>Features:</h2><ul><li>Developer can create their own widgets easy</li><li>Support permission, admin can assign some specific widgets for specific users</li><li>Developer can create container for widget, for example a widget is place inside a box with box title</li><li>User can change their own widget content settings, widget container settings…</li><li>User can add/remove their widgets</li><li>User can save and reload their dashboard layout/setting from database</li><li>User can resize widget, support drag &amp; drop</li><li>Context menu on widget grid (right-click menu)</li><li>Loading overlay</li><li>OOP, typescript code</li><li>Re-use Serenity features</li><li>…</li></ul><p>Contact me for more information !</p><img src="/2020/12/26/012-introduce-dashboard-widget-system/img-demo-1.png">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I created dashboard widget system which will help developer create their own widgets easy for Serenity framework&lt;/p&gt;
+&lt;h2 id=&quot;Demo&quot;&gt;&lt;a hre
+      
+    
+    </summary>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
+    
+      <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
+    
+    
+      <category term="serenity" scheme="https://minhhungit.github.io/tags/serenity/"/>
+    
+      <category term="dashboard" scheme="https://minhhungit.github.io/tags/dashboard/"/>
+    
+      <category term="widget" scheme="https://minhhungit.github.io/tags/widget/"/>
+    
+  </entry>
   
   <entry>
     <title>Keep menu toggle state after page reload</title>
@@ -303,38 +336,6 @@
       
       
         &lt;h2 id=&quot;Back-to-the-future-D&quot;&gt;&lt;a href=&quot;#Back-to-the-future-D&quot; class=&quot;headerlink&quot; title=&quot;Back to the future :D&quot;&gt;&lt;/a&gt;Back to the future :D&lt;/h2
-      
-    
-    </summary>
-    
-    
-      <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
-    
-      <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
-    
-    
-      <category term="serenity" scheme="https://minhhungit.github.io/tags/serenity/"/>
-    
-      <category term="slider" scheme="https://minhhungit.github.io/tags/slider/"/>
-    
-      <category term="serenity-dialog" scheme="https://minhhungit.github.io/tags/serenity-dialog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>How To Create A Slider Dialog In Serenity (Part 1)</title>
-    <link href="https://minhhungit.github.io/2019/09/26/002-how-to-create-slider-dialog-in-serenity-part-1/"/>
-    <id>https://minhhungit.github.io/2019/09/26/002-how-to-create-slider-dialog-in-serenity-part-1/</id>
-    <published>2019-09-26T04:29:01.000Z</published>
-    <updated>2020-06-10T13:10:37.476Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>Currently, at the point I write this post, the latest Sereity’s version is 3.9.8, Serenity just have 2 types of dialog,<br>they are a generic dialog (using jquery dialog) and panel dialog.</p><p style="text-align: center">  <img src="/2019/09/26/002-how-to-create-slider-dialog-in-serenity-part-1/generic-dialog.jpg" title="Generic Dialog">  <i>Generic Dialog</i></p><p style="text-align: center">  <img src="/2019/09/26/002-how-to-create-slider-dialog-in-serenity-part-1/panel-dialog.jpg" title="Panel Dialog">  <br>  <i>Panel Dialog</i></p><p>With Startsharp version, they also provide you a feature that you can open dialog directly on grid (side by side), it’s called <strong><code>Entity Grid Dialog</code></strong></p><img src="/2019/09/26/002-how-to-create-slider-dialog-in-serenity-part-1/entity-grid-dialog.jpg" title="Entity Grid Dialog"><p>I personality want to use new style - a slider which I can open dialog directly from menu button on header (like open a Setting panel)</p><p>This post I will show you how to implement and use it to replace current dialog’s styles but you can also do it like I said if you want easily</p><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><img src="/2019/09/26/002-how-to-create-slider-dialog-in-serenity-part-1/right-slider-with-entity-dialog.gif" title="Slider Dialog"><h2 id="Implementing"><a href="#Implementing" class="headerlink" title="Implementing"></a>Implementing</h2><p>Okay, so how ? we will implement slider dialog using <a href="https://github.com/nnattawat/slideReveal" target="_blank" rel="noopener">slideReveal</a> library, firstly download and include it into project</p><img src="/2019/09/26/002-how-to-create-slider-dialog-in-serenity-part-1/add-slidereveal-library.jpg" title="Add slideReveal library.jpg"><p>Create <code>MySlilerReveal.ts</code> file and put it into <code>~/Modules/Common/Helpers</code></p><script src="//gist.github.com/c47e7deda04eeec7c52924eab3cba1e6.js?file=MySlilerReveal.ts"></script><p>To replace current styles, just put this bellow code into your <code>grid.ts</code> file</p><script src="//gist.github.com/c47e7deda04eeec7c52924eab3cba1e6.js?file=ProductGrid.ts"></script><p>That’s it!</p><p>Feel free to ask any questions :heart:</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Introduce&quot;&gt;&lt;a href=&quot;#Introduce&quot; class=&quot;headerlink&quot; title=&quot;Introduce&quot;&gt;&lt;/a&gt;Introduce&lt;/h2&gt;&lt;p&gt;Currently, at the point I write this post,
       
     
     </summary>
