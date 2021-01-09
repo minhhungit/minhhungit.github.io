@@ -54,7 +54,7 @@
     <link href="https://minhhungit.github.io/2020/10/16/011-keep-menu-toggle-state-after-page-reload/"/>
     <id>https://minhhungit.github.io/2020/10/16/011-keep-menu-toggle-state-after-page-reload/</id>
     <published>2020-10-15T23:32:00.000Z</published>
-    <updated>2020-10-16T00:12:54.034Z</updated>
+    <updated>2021-01-09T05:01:07.296Z</updated>
     
     <content type="html"><![CDATA[<p>I saw some users need to keep left menu toggle state after page reload, the idea is quite simple, we need something to keep state, localStorage is a good candidate.</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage</a></p><p>As usual, here is demo:</p><img src="/2020/10/16/011-keep-menu-toggle-state-after-page-reload/side-menu-keep-state-demo.gif"><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>As you see in demo, when we hit menu toggle button on top left page, it will toggle <code>sidebar-collapse</code> class of <code>body</code> tag.<br>We need to store this state into localStorage and re-set it when page is reloaded.</p><h3 id="Modules-Common-J-ts"><a href="#Modules-Common-J-ts" class="headerlink" title="Modules/Common/J.ts"></a>Modules/Common/J.ts</h3><p>We will need two helper methods to work with localStorage</p><script src="//gist.github.com/54367f416d589e707e42a04772a2ef63.js?file=J.ts"></script><h3 id="Views-Shared-Layout-cshtml"><a href="#Views-Shared-Layout-cshtml" class="headerlink" title="Views/Shared/_Layout.cshtml"></a>Views/Shared/_Layout.cshtml</h3><p>Near bottom of _Layout.cshtml file, we will handle click event of toggle button and store state into storage with key <code>IS_SIDEBAR_COLLAPSE</code></p><script src="//gist.github.com/54367f416d589e707e42a04772a2ef63.js?file=_Layout.cshtml"></script><h3 id="Views-Shared-LeftNavigation-cshtml"><a href="#Views-Shared-LeftNavigation-cshtml" class="headerlink" title="Views/Shared/LeftNavigation.cshtml"></a>Views/Shared/LeftNavigation.cshtml</h3><p>The rest is getting state from storage with key <code>IS_SIDEBAR_COLLAPSE</code> and toogle class <code>sidebar-collapse</code> for <code>body</code> tag</p><script src="//gist.github.com/54367f416d589e707e42a04772a2ef63.js?file=LeftNavigation.cshtml"></script><p>That’s it !</p><h3 id="Bonus"><a href="#Bonus" class="headerlink" title="Bonus"></a>Bonus</h3><p>If you don’t want side menu push right panel everytime we hover mouse pointer on the menu then we can remove <code>fixed</code> class of <code>body</code> tag, the result will be something like this:</p><img src="/2020/10/16/011-keep-menu-toggle-state-after-page-reload/side-menu-remove-fixed-class.gif"><p>It’s not too bad I guess :)</p>]]></content>
     
@@ -71,10 +71,6 @@
       <category term="serenity" scheme="https://minhhungit.github.io/categories/serenity/"/>
     
       <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
-    
-      <category term="navigation" scheme="https://minhhungit.github.io/categories/navigation/"/>
-    
-      <category term="local-storage" scheme="https://minhhungit.github.io/categories/local-storage/"/>
     
     
       <category term="serenity" scheme="https://minhhungit.github.io/tags/serenity/"/>
@@ -124,7 +120,7 @@
     <link href="https://minhhungit.github.io/2020/08/06/009-implement-helping-button-using-popover-bootstrap-3-on-serenity-form/"/>
     <id>https://minhhungit.github.io/2020/08/06/009-implement-helping-button-using-popover-bootstrap-3-on-serenity-form/</id>
     <published>2020-08-06T14:06:00.000Z</published>
-    <updated>2020-08-06T14:30:54.031Z</updated>
+    <updated>2021-01-09T05:01:48.817Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><img src="/2020/08/06/009-implement-helping-button-using-popover-bootstrap-3-on-serenity-form/popover-button.gif"><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><h3 id="J-HelpPopover-ts"><a href="#J-HelpPopover-ts" class="headerlink" title="J.HelpPopover.ts"></a>J.HelpPopover.ts</h3><script src="//gist.github.com/4915e4d6cf96c9868a7648f7d2f7cacd.js?file=J.HelpPopover.ts"></script><h3 id="J-HelpPopoverAttribute-cs"><a href="#J-HelpPopoverAttribute-cs" class="headerlink" title="J.HelpPopoverAttribute.cs"></a>J.HelpPopoverAttribute.cs</h3><script src="//gist.github.com/4915e4d6cf96c9868a7648f7d2f7cacd.js?file=J.HelpPopoverAttribute.cs"></script><h3 id="site-less"><a href="#site-less" class="headerlink" title="site.less"></a>site.less</h3><script src="//gist.github.com/4915e4d6cf96c9868a7648f7d2f7cacd.js?file=site.less"></script><h3 id="YourDialog-ts"><a href="#YourDialog-ts" class="headerlink" title="YourDialog.ts"></a>YourDialog.ts</h3><script src="//gist.github.com/4915e4d6cf96c9868a7648f7d2f7cacd.js?file=YourDialog.ts"></script><h3 id="YourForm-cs"><a href="#YourForm-cs" class="headerlink" title="YourForm.cs"></a>YourForm.cs</h3><script src="//gist.github.com/4915e4d6cf96c9868a7648f7d2f7cacd.js?file=YourForm.cs"></script><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul><li><a href="https://bootstrapdocs.com/v3.3.6/docs/javascript/#popovers" target="_blank" rel="noopener">https://bootstrapdocs.com/v3.3.6/docs/javascript/#popovers</a></li><li><a href="https://github.com/volkanceylan/Serenity/issues/2922" target="_blank" rel="noopener">https://github.com/volkanceylan/Serenity/issues/2922</a></li></ul>]]></content>
     
@@ -142,7 +138,7 @@
     
       <category term="typescript" scheme="https://minhhungit.github.io/categories/typescript/"/>
     
-      <category term="bootstrap" scheme="https://minhhungit.github.io/categories/bootstrap/"/>
+      <category term="CSS" scheme="https://minhhungit.github.io/categories/CSS/"/>
     
     
       <category term="serenity-form" scheme="https://minhhungit.github.io/tags/serenity-form/"/>
@@ -191,7 +187,7 @@
     <link href="https://minhhungit.github.io/2019/10/17/007-how-to-embed-gif-image-into-github-issue-or-wiki/"/>
     <id>https://minhhungit.github.io/2019/10/17/007-how-to-embed-gif-image-into-github-issue-or-wiki/</id>
     <published>2019-10-17T02:30:00.000Z</published>
-    <updated>2020-06-10T13:10:37.523Z</updated>
+    <updated>2021-01-09T05:04:04.609Z</updated>
     
     <content type="html"><![CDATA[<p>Use this:</p><p><code>![](put-your-gif-link-here.gif)</code></p><p>Demo:</p><img src="/2019/10/17/007-how-to-embed-gif-image-into-github-issue-or-wiki/gif-github.gif"><p>Btw you can upload your gif on <a href="https://giphy.com/" target="_blank" rel="noopener">giphy</a> and get link.</p><p>That’s it!</p>]]></content>
     
@@ -207,10 +203,6 @@
     
     </summary>
     
-    
-      <category term="github" scheme="https://minhhungit.github.io/categories/github/"/>
-    
-      <category term="markdown" scheme="https://minhhungit.github.io/categories/markdown/"/>
     
     
       <category term="github" scheme="https://minhhungit.github.io/tags/github/"/>
