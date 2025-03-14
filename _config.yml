@@ -14,9 +14,9 @@ timezone: Asia/Ho_Chi_Minh
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Jin # the main title
+title: Jin's Blog # the main title
 
-tagline: minhhungit # it will display as the subtitle
+tagline: # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Architect - Development Team Lead at LetterB LLC. I fall in love with AI LLMs, big data, distributed systems, and event streaming. I love to explore new technologies and continuously improve my coding skills
